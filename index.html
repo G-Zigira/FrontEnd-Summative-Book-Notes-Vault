@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BookVault</title>
+<link rel="stylesheet" href="styles/main.css">
+<script type="module" defer src="scripts/app.js"></script>
+</head>
+
+<body>
+
+<header>
+  <h2 class="logo">📖 BookVault</h2>
+  <nav>
+    <button data-page="dashboard" class="nav-btn active">Dashboard</button>
+    <button data-page="add" class="nav-btn">Add</button>
+    <button data-page="edit" class="nav-btn">Edit</button>
+    <button data-page="about" class="nav-btn">About</button>
+    <button data-page="settings" class="nav-btn">Settings</button>
+  </nav>
+</header>
+
+<main>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="page active">
+  <div class="hero">
+    <h1>BookVault</h1>
+    <p>Your personal digital library</p>
+  </div>
+
+  <h2>Vault Statistics</h2>
+  <section class="stats">
+    <div class="stat-card"><h3 id="totalBooks">0</h3>Total Books</div>
+    <div class="stat-card"><h3 id="totalPages">0</h3>Total Pages</div>
+    <div class="stat-card"><h3 id="topAuthor">—</h3>Top Author</div>
+    <div class="stat-card"><h3 id="lastOpened">—</h3>Last Opened</div>
+    <div class="stat-card"><h3 id="totalAuthors">0</h3>Total Authors</div>
+  </section>
+
+  <div class="search-bar">
+    🔍 <input id="searchInput" placeholder="Search books...">
+  </div>
+
+  <section id="booksGrid" class="books-grid"></section>
+</section>
+
+<!-- ADD -->
+<section id="add" class="page">
+  <h1>Add a Book</h1>
+
+  <form id="addForm">
+    <label>Title</label>
+    <input required id="titleInput">
+
+    <label>Author</label>
+    <input required id="authorInput">
+
+    <label>Genre</label>
+    <input id="tagInput">
+
+    <label>Number of Pages</label>
+    <input type="number" id="pagesInput">
+
+    <label>Date Added</label>
+    <input type="date" id="dateInput">
+
+    <label>Upload PDF or TXT</label>
+    <input type="file" id="fileInput" accept=".pdf,.txt">
+
+    <button>Add Book</button>
+  </form>
+</section>
+
+<!-- EDIT -->
+<section id="edit" class="page">
+  <h1>Edit Books</h1>
+  <div class="search-bar">
+    🔍 <input id="editSearch" placeholder="Search by title or author">
+  </div>
+  <div id="editList"></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="page">
+  <h1>About BookVault</h1>
+  <p>
+    BookVault is your personal digital library — a simple, elegant space
+    to store, organize, and read your PDF and text files.
+  </p>
+</section>
+
+<!-- SETTINGS -->
+<section id="settings" class="page">
+  <h1>Settings</h1>
+  <button id="themeToggle">Toggle Dark Mode</button>
+  <button id="sortAZ">Sort A–Z</button>
+  <button id="sortDate">Sort by Date</button>
+</section>
+
+</main>
+
+</body>
+</html>
