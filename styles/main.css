@@ -53,14 +53,14 @@ nav a.active, nav a:hover {
   padding: 2rem;
 }
 
-.stat-card {
+.staticard {
   background: var(--card);
   padding: 1.5rem;
   border-radius: var(--radius);
   text-align: center;
   transition: transform .2s;
 }
-.stat-card:hover {
+.staticard:hover {
   transform: translateY(-5px);
 }
 
