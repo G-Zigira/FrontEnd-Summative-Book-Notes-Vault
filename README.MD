@@ -76,6 +76,10 @@ No installation or build steps are required.
 
 **Zigira Luc Guevara**
 
+## Links 
+
+github repo: "https://github.com/G-Zigira/FrontEnd-Summative-Book-Notes-Vault"
+github io: "https://g-zigira.github.io/FrontEnd-Summative-Book-Notes-Vault/"
 ## 📄 License
 
 This project is for educational purposes only.
