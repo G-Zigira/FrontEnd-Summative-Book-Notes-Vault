@@ -2,60 +2,67 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>BookVault</title>
+<title>StudentBookVault</title>
 <link rel="stylesheet" href="styles/main.css">
+
 <script type="module" defer src="scripts/app.js"></script>
 </head>
 
 <body>
 
 <header>
-
-  <h2 class="logo">BookVault</h2>
+  <div class="navbrand">
+  <img src="images/logo.png" alt="BookVault Logo" class="navlogo">
+  <h1>Student BookVault</h1>
+</div>
   <nav>
-    <button data-page="dashboard" class="nav-btn active">Dashboard</button>
-    <button data-page="add" class="nav-btn">Add</button>
-    <button data-page="edit" class="nav-btn">Edit</button>
-    <button data-page="about" class="nav-btn">About</button>
-    <button data-page="settings" class="nav-btn">Settings</button>
+    <button data-page="dashboard" class="navbtn active">Dashboard</button>
+    <button data-page="add" class="navbtn">Add</button>
+    <button data-page="edit" class="navbtn">Edit</button>
+    <button data-page="about" class="navbtn">About</button>
+    <button data-page="settings" class="navbtn">Settings</button>
   </nav>
 </header>
 
 <main>
 
 
-
 <section id="dashboard" class="page active">
-
-
   <div class="hero">
-    <h1>BookVault</h1>
-    <p>Your personal digital library</p>
+    <h1>Student BookVault</h1>
+    
+    <img src="images/image.png" alt="Library Image" class="dashboardimage">
+    <p>Your own personal digital library</p>
   </div>
+
 
   <h2>Vault Statistics</h2>
 
   <section class="stats">
-    <div class="staticard"><h3 id="totalBooks">0</h3>Total Books</div>
-    <div class="staticard"><h3 id="totalPages">0</h3>Total Pages</div>
-    <div class="staticard"><h3 id="topAuthor">—</h3>Top Author</div>
-    <div class="staticard"><h3 id="lastOpened">—</h3>Last Opened</div>
-    <div class="staticard"><h3 id="totalAuthors">0</h3>Total Authors</div>
+    <div class="statcard"><h3 id="totalBooks">0</h3>Total Books</div>
+    <div class="statcard"><h3 id="totalPages">0</h3>Total Pages</div>
+    <div class="statcard"><h3 id="topAuthor">—</h3>Top Author</div>
+    <div class="statcard"><h3 id="lastOpened">—</h3>Last Opened</div>
+    <div class="statcard"><h3 id="totalAuthors">0</h3>Total Authors</div>
   </section>
 
 
-  <div class="search-bar">
-     <input id="searchInput" placeholder="Search books...">
+  <div class="searchbar">
+    <input id="searchInput" placeholder="Search for books">
   </div>
 
-  <section id="booksGrid" class="books-grid"></section>
+
+  <section id="booksGrid" class="booksgrid"></section>
 </section>
 
-<!-- ADD -->
+
+
 <section id="add" class="page">
-  <h1>Add a Book</h1>
+  <h1>Add or Edit a Book</h1>
+
 
   <form id="addForm">
+
     <label>Title</label>
     <input required id="titleInput">
 
@@ -74,36 +81,46 @@
     <label>Upload PDF or TXT</label>
     <input type="file" id="fileInput" accept=".pdf,.txt">
 
-    <button>Add Book</button>
+    <button>Add or Edit a Book</button>
   </form>
 </section>
 
-<!-- EDIT -->
+
 <section id="edit" class="page">
   <h1>Edit Books</h1>
-  <div class="search-bar">
+  <div class="searchbar">
     <input id="editSearch" placeholder="Search by title or author">
   </div>
   <div id="editList"></div>
 </section>
 
 
-
 <section id="about" class="page">
-  <h1>About BookVault</h1>
+  <h1>About the Student BookVault</h1>
+  <img src="images/image.png" alt="About Image" class="aboutimage">
+
   <p>
     BookVault is your personal digital library — a simple, elegant space
     to store, organize, and read your PDF and text files.
+  
   </p>
+
+  <p>Contact me:</p>
+
+  <p>My Email:<a href="mailto:g.zigira@alustudent.com">g.zigira@alustudent.com</a></p>
+
+  <p>My GitHub:<a href="https://github.com/G-Zigira" target="_blank">https://github.com/G-Zigira</a></p>
+
 </section>
 
 
 
 <section id="settings" class="page">
+
   <h1>Settings</h1>
   <button id="themeToggle">Toggle Dark Mode</button>
-  <button id="sortAZ">Sort A–Z</button>
-  <button id="sortDate">Sort by Date</button>
+  <button id="sortAZ">Sort books in A–Z</button>
+  <button id="sortDate">Sort books by Date</button>
 </section>
 
 </main>
